@@ -5,7 +5,7 @@ public class ClickManager : MonoBehaviour
 {
     public Transform player;
     GameManager gameManager;
-    bool playerWalking;
+    public bool playerWalking;
 
     private void Start()
     {
@@ -13,33 +13,54 @@ public class ClickManager : MonoBehaviour
     }
     public void MovePlayerToPista(PistaData pista)
     {
-        StartCoroutine(gameManager.MoveToPoint(player, pista.goToPoint.position));
+        //Update hint box
+        gameManager.UpdateHintTag(null, false);
+        //ANIMATION HERE
         playerWalking = true;
+        //MovePlayer
+        StartCoroutine(gameManager.MoveToPoint(player, pista.goToPoint.position));
+        
+        
         TryGetPista(pista);
-        UpdateSceneAfterAction(pista);
+        
     }
 
     
 
     private void TryGetPista(PistaData pista)
     {
-        if(pista.requiredPistaID == -1 || GameManager.collectItems.Contains(pista.pistaID))
+        bool canget = pista.requiredPistaID == -1 || GameManager.collectItems.Contains(pista.pistaID);
+        if (canget)
         {
             GameManager.collectItems.Add(pista.pistaID);
 
         }
+        StartCoroutine(UpdateSceneAfterAction(pista, canget));
     }
 
-    private IEnumerator UpdateSceneAfterAction(PistaData pista)
+    private IEnumerator UpdateSceneAfterAction(PistaData pista, bool canGetItem)
     {
-        if (playerWalking)
+        while (playerWalking)
         {
             yield return new WaitForSeconds(0.05f);
         }
-        foreach (GameObject g in pista.pistasToRemove)
+        if(canGetItem)
         {
-            Destroy(g);
+            foreach (GameObject g in pista.pistasToRemove)
+            {
+                Destroy(g);
+            }
+            Debug.Log("Item Collect");
         }
-        Debug.Log("Item Collect");
+        else
+        {
+            gameManager.UpdateHintTag(pista, player.GetComponentInChildren<SpriteRenderer>().flipX);
+        }
+            yield return null;
     }
+
+    //public IEnumerator ChangeScene(int sceneNumber, float deley)
+    //{
+
+    //}
 }
