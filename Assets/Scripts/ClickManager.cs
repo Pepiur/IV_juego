@@ -35,9 +35,10 @@ public class ClickManager : MonoBehaviour
     {
         while (playerWalking)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return null;
         }
-        StartCoroutine(gameManager.TransicionEscena(escena));
+        gameManager.TransicionEscena(escena);
+        yield return null;
     }
 
     private void TryGetPista(PistaData pista)

@@ -10,12 +10,7 @@ public class GestorEscenas : MonoBehaviour
 
     private void Start()
     {
-        Color c = blockImage.color;
-        while (blockImage.color.a > 0)
-        {
-            c.a -= Time.deltaTime;
-            blockImage.color = c;
-        }
+
         blockImage.gameObject.SetActive(false);
     }
 

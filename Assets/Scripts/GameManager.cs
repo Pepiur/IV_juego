@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator MoveToPoint(Transform myObject,Vector2 point)
     {
+        hintBox.gameObject.SetActive(false);
         Vector2 positionDifference = point - (Vector2)myObject.position;
         while (positionDifference.magnitude > moveAccuracy)
         {
@@ -35,17 +36,17 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator TransicionEscena(PasarEscenaData escena)
+    public void TransicionEscena(PasarEscenaData escena)
     {
         blockImage.gameObject.SetActive(true);
         Color c = blockImage.color;
+        c.a = 0.7f;
         while (blockImage.color.a < 1)
         {
             c.a += Time.deltaTime;
             blockImage.color = c;
         }
         gestorEscenas.CambiarEscena(escena);
-        yield return null;
     }
 
     public void UpdateNameTag(PistaData pista)
@@ -71,8 +72,17 @@ public class GameManager : MonoBehaviour
         hintBox.sizeDelta = pista.textoNameTagSize;
 
         if(playerFlipped)
-        { hintBox.localPosition = new Vector2(0, 4f); }
-        else { hintBox.localPosition = new Vector2(0, 4f); }
+        { hintBox.localPosition = new Vector2(0, 2f); }
+        else { hintBox.localPosition = new Vector2(0, 2f); }
+        bool delay = true;
+        StartCoroutine(turnOffHint(delay));
+        
+    }
+
+    private IEnumerator turnOffHint(bool delay)
+    {
+        if (delay) { delay = false;  yield return new WaitForSeconds(7.0f); }
+        hintBox.gameObject.SetActive(false);
     }
 
 }
