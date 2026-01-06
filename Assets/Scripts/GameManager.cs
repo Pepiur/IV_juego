@@ -10,6 +10,14 @@ public class GameManager : MonoBehaviour
     public static List<int> collectItems = new List<int>();
     static float moveSpeed = 3.5f, moveAccuracy = 0.15f;
     public RectTransform nameTag, hintBox;
+    GestorEscenas gestorEscenas;
+    public Image blockImage;
+
+    private void Start()
+    {
+        gestorEscenas = GetComponent<GestorEscenas>();
+    }
+
     public IEnumerator MoveToPoint(Transform myObject,Vector2 point)
     {
         Vector2 positionDifference = point - (Vector2)myObject.position;
@@ -24,6 +32,19 @@ public class GameManager : MonoBehaviour
             FindFirstObjectByType<ClickManager>().playerWalking = false;
         }
         myObject.position = point;
+        yield return null;
+    }
+
+    public IEnumerator TransicionEscena(PasarEscenaData escena)
+    {
+        blockImage.gameObject.SetActive(true);
+        Color c = blockImage.color;
+        while (blockImage.color.a < 1)
+        {
+            c.a += Time.deltaTime;
+            blockImage.color = c;
+        }
+        gestorEscenas.CambiarEscena(escena);
         yield return null;
     }
 

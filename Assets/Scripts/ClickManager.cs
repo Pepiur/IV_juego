@@ -19,13 +19,26 @@ public class ClickManager : MonoBehaviour
         playerWalking = true;
         //MovePlayer
         StartCoroutine(gameManager.MoveToPoint(player, pista.goToPoint.position));
-        
-        
         TryGetPista(pista);
         
     }
 
-    
+    public void MovePlayerToEndScene(PasarEscenaData escena)
+    {
+        playerWalking = true;
+        StartCoroutine(gameManager.MoveToPoint(player, escena.goToPoint.position));
+        StartCoroutine(HacerTiempo(escena));
+        
+    }
+
+    private IEnumerator HacerTiempo(PasarEscenaData escena)
+    {
+        while (playerWalking)
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
+        StartCoroutine(gameManager.TransicionEscena(escena));
+    }
 
     private void TryGetPista(PistaData pista)
     {
@@ -58,9 +71,4 @@ public class ClickManager : MonoBehaviour
         }
             yield return null;
     }
-
-    //public IEnumerator ChangeScene(int sceneNumber, float deley)
-    //{
-
-    //}
 }
