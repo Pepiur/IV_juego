@@ -6,10 +6,41 @@ public class ClickManager : MonoBehaviour
     public Transform player;
     GameManager gameManager;
     public bool playerWalking;
+    Camera camera;
+    Coroutine goToClickCorrutine;
+    float goToClickMaxY = 5.0f;
 
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
+        camera = GetComponent<Camera>();
+    }
+
+    public void Update()
+    {
+        if(Input.GetMouseButtonUp(0))
+        {
+            goToClickCorrutine = StartCoroutine(GoToClick(Input.mousePosition));
+        }
+    }
+
+    public IEnumerator GoToClick(Vector2 mousePoistion)
+    {
+        yield return new WaitForSeconds(0.05f);
+
+        Vector2 targetPos = camera.ScreenToWorldPoint(mousePoistion);
+
+        if(targetPos.y > goToClickMaxY || playerWalking)
+        {
+            yield break;
+        }
+
+        gameManager.UpdateHintTag(null, false);
+
+        playerWalking = true;
+        StartCoroutine(gameManager.MoveToPoint(player, targetPos));
+
+        StartCoroutine(CleanAfterClick());
     }
     public void MovePlayerToPista(PistaData pista)
     {
@@ -54,6 +85,12 @@ public class ClickManager : MonoBehaviour
 
     private IEnumerator UpdateSceneAfterAction(PistaData pista, bool canGetItem)
     {
+        yield return null;
+        if (goToClickCorrutine != null)
+        {
+            StopCoroutine(goToClickCorrutine);
+        }
+
         while (playerWalking)
         {
             yield return new WaitForSeconds(0.05f);
@@ -72,4 +109,14 @@ public class ClickManager : MonoBehaviour
         }
             yield return null;
     }
+
+    private IEnumerator CleanAfterClick()
+    {
+        while(playerWalking)
+        {
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return null;
+    }
+
 }

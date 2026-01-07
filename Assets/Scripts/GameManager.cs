@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public RectTransform nameTag, hintBox;
     GestorEscenas gestorEscenas;
     public Image blockImage;
+    public GameObject pistas;
 
     private void Start()
     {
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
     {
         hintBox.gameObject.SetActive(false);
         Vector2 positionDifference = point - (Vector2)myObject.position;
+
+        if(myObject.GetComponent<SpriteRenderer>() && positionDifference.x != 0)
+        {
+            myObject.GetComponent<SpriteRenderer>().flipX = positionDifference.x > 0;
+        }
         while (positionDifference.magnitude > moveAccuracy)
         {
             myObject.Translate(moveSpeed * positionDifference.normalized * Time.deltaTime);
@@ -33,6 +39,7 @@ public class GameManager : MonoBehaviour
             FindFirstObjectByType<ClickManager>().playerWalking = false;
         }
         myObject.position = point;
+        FindFirstObjectByType<LoadPosition>().estado.posPlayer = point;
         yield return null;
     }
 
