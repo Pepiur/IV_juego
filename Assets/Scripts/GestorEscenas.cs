@@ -16,7 +16,7 @@ public class GestorEscenas : MonoBehaviour
 
     public void CargarJuego()
     {
-
+        SceneManager.LoadScene(1);
     }
 
     public void SalirApp()
