@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derecha: 0
   goToPoint: {fileID: 7419921246481754961}
+  idx: 0
 --- !u!114 &8644438363240991909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   derecha: 1
   goToPoint: {fileID: 7017013722563348592}
+  idx: 0
 --- !u!114 &3754982118545930134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +336,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &8716798301090136228
 MonoBehaviour:

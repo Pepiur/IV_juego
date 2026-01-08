@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     GestorEscenas gestorEscenas;
     public Image blockImage;
     public GameObject pistas;
+    public GameObject[] scenes;
+    public int activeScene = 0;
 
     private void Start()
     {
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour
             FindFirstObjectByType<ClickManager>().playerWalking = false;
         }
         myObject.position = point;
-        FindFirstObjectByType<LoadPosition>().estado.posPlayer = point;
+        FindFirstObjectByType<LoadPosition>().estados[activeScene].posPlayer = point;
         yield return null;
     }
 
@@ -53,7 +55,16 @@ public class GameManager : MonoBehaviour
             c.a += Time.deltaTime;
             blockImage.color = c;
         }
-        gestorEscenas.CambiarEscena(escena);
+        if (escena.derecha)
+        {
+            activeScene += 1;
+        }
+        else
+        {
+            activeScene -= 1;
+        }
+        FindFirstObjectByType<LoadPosition>().newPositionScene(activeScene);
+        gestorEscenas.Verga(escena, scenes);
     }
 
     public void UpdateNameTag(PistaData pista)

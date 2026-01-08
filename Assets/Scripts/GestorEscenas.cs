@@ -24,15 +24,19 @@ public class GestorEscenas : MonoBehaviour
         Application.Quit();
     }
 
-    public void CambiarEscena(PasarEscenaData escena)
+    public void Verga(PasarEscenaData escena, GameObject[] escenas)
     {
         if(escena.derecha)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            escenas[escena.idx].SetActive(false);
+            escenas[escena.idx + 1].SetActive(true);
         }
         else
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            escenas[escena.idx].SetActive(false);
+            escenas[escena.idx - 1].SetActive(true);
         }
     }
+
+    //HOLAAAAAAAAAAAAAAAA
 }
