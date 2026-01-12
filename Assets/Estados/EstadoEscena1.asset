@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b0ca75bfc140445a0b665752d62d14, type: 3}
   m_Name: EstadoEscena1
   m_EditorClassIdentifier: 
-  posPlayer: {x: 8.5, y: 5}
+  posPlayer: {x: 17.27, y: 3.4}
