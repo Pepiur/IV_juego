@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1364652793093537963}
   - component: {fileID: 1165732755493927573}
   - component: {fileID: 6476255952335063926}
+  - component: {fileID: 4376157734591192134}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -172,6 +173,10 @@ MonoBehaviour:
   hintBox: {fileID: 658858651674429214}
   blockImage: {fileID: 6224989167101901936}
   pistas: {fileID: 0}
+  scenes:
+  - {fileID: 0}
+  - {fileID: 0}
+  activeScene: 0
 --- !u!114 &6476255952335063926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +190,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockImage: {fileID: 6224989167101901936}
+--- !u!114 &4376157734591192134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30692779303211878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 2
+  m_RefResolutionX: 320
+  m_RefResolutionY: 270
+  m_CropFrame: 2
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &3345159990435496311
 GameObject:
   m_ObjectHideFlags: 0

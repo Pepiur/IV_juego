@@ -43,5 +43,12 @@ public class PlayerController : MonoBehaviour, IPlayer
         currentState = state;
         currentState.Enter();
     }
+    public void MoveTo(Transform target)
+    {
 
+    }
+    public void GetPista()
+    {
+
+    }
 }
