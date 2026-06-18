@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa38723e4db8934f801c7df973fe94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabGota: {fileID: 0}
+  prefabGota: {fileID: 5029722739049365869, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
   cantidadInicialGotas: 100
   anchoDeTormenta: 10
   gotasPorSegundo: 20
@@ -1771,6 +1771,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122874000}
   m_CullTransparentMesh: 1
+--- !u!1001 &3946036954763977754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.7728407
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3620208
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03999549
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 196714989631512260, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071205550099765155, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
+      propertyPath: m_Name
+      value: GotaPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acdfbaf311dafe34488346cc5f8524dd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1785,3 +1842,4 @@ SceneRoots:
   - {fileID: 4506990}
   - {fileID: 1034524846}
   - {fileID: 400587666}
+  - {fileID: 3946036954763977754}
