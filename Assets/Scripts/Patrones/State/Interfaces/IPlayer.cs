@@ -3,10 +3,15 @@ namespace Patrones.State.Interfaces
 {
     public interface IPlayer
     {
-        public GameObject GetGameObject();
-        public void SetState(IState state);
-        public IState GetState();
-        public void MoveTo(Transform target);
-        public void GetPista();
+        Rigidbody2D GetRigidbody();
+        Vector2 GetPosicionObjetivo();
+        float GetVelocidad();
+        LayerMask GetCapaPistas();
+        LayerMask GetCapaNPCs();
+        void SetPosicionObjetivo(Vector2 posicion);
+        void CambiarEstado(IState nuevoEstado);
+        IState GetStateAnterior();
+        void setStateAnterior(IState nuevoEstado);
+        IState GetState();
     }
 }

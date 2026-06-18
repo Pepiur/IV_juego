@@ -10,13 +10,9 @@ namespace Patrones.State.Interfaces
         {
             this.player = player;
         }
-        public abstract void Enter();
-        public abstract void Exit();
-        public abstract void Caminar();
-        public abstract void InteractuarPista();
-        public abstract void InteractuarPersonaje();
-        public abstract void Logica();
-        public abstract void Update();
-        public abstract void FixedUpdate();
+        public virtual void Enter() { }
+        public virtual void Update() { }
+        public virtual void FixedUpdate() { }
+        public virtual void Exit() { }
     }
 }
