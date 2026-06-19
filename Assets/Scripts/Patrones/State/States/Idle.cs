@@ -7,6 +7,7 @@ public class Idle : APlayerState
 
     public override void Update()
     {
+        if (UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject()) return;
         if (Input.GetMouseButtonDown(1))
         {
             Vector3 posicionRaton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
