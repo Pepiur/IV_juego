@@ -8,11 +8,12 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
     public string personaje;
     [TextArea(3, 5)] public string texto;
 
+    [Header("Encadenamiento")]
+    public DialogoDataSO siguienteDialogo;
+
     [Header("Condiciones (Estado Intrínseco)")]
     public Pista pistaRequerida; // Si es null, el diálogo siempre está disponible
     public int nivelProgresoRequerido = 0;
-
-    // operation(extrinsicState)
     public void EjecutarDialogo(ContextoJugador contexto)
     {
         if (contexto.progresoHistoria < nivelProgresoRequerido)
@@ -26,6 +27,6 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
             DialogoUI.Instance.IniciarDialogo("Edgeworth", "Parece que me falta información vital para presionar sobre este tema...");
             return;
         }
-        DialogoUI.Instance.IniciarDialogo(personaje, texto);
+        DialogoUI.Instance.CargarNodoDialogo(this);
     }
 }

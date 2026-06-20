@@ -7,7 +7,8 @@ public struct CombinacionLogica
 {
     public Pista pistaRequerida1;
     public Pista pistaRequerida2;
-    public string mensajeExito;
+    public DialogoDataSO dialogoExito;
+    public Pista pistaRecompensa;
 }
 
 public class SistemaLogica : MonoBehaviour
@@ -44,6 +45,7 @@ public class SistemaLogica : MonoBehaviour
     public void AbrirMenuLogica()
     {
         panelLogica.SetActive(true);
+        DialogoUI.Instance.CerrarDialogo();
         Time.timeScale = 0f; 
         GenerarPistasEnUI();
     }
@@ -133,7 +135,16 @@ public class SistemaLogica : MonoBehaviour
             if ((pista1 == combo.pistaRequerida1 && pista2 == combo.pistaRequerida2) ||
                 (pista1 == combo.pistaRequerida2 && pista2 == combo.pistaRequerida1))
             {
-                Debug.Log("¡Lógica correcta! " + combo.mensajeExito);
+                CerrarMenuLogica();
+                if (combo.pistaRecompensa != null)
+                {
+                    OrganizadorPistas.Instance.CollectPista(combo.pistaRecompensa);
+                }
+                if (combo.dialogoExito != null)
+                {
+                    ContextoJugador contexto = new ContextoJugador(OrganizadorPistas.Instance.GetPistas(), 1); //ESE UNO HABRIA QUE CAMBIARLO POR ALGUNA VARIABLE QUE AUMENTE O ALGO ASI
+                    combo.dialogoExito.EjecutarDialogo(contexto);
+                }
                 exito = true;
 
                 // TODO: Aquí podrías reproducir la animación de "¡EUREKA!" de Edgeworth
