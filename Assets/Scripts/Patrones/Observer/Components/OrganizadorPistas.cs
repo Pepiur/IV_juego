@@ -51,6 +51,7 @@ public class OrganizadorPistas : MonoBehaviour
             pistas.Add(nuevaPista);
             Debug.Log($"Pista recogida: {nuevaPista.nombre}");
             NotifyObserver();
+            GameManager.Instancia.AvanzarHistoria(1);
         }
     }
     public List<Pista> GetPistas() => pistas;

@@ -29,6 +29,8 @@ public class SistemaLogica : MonoBehaviour
     private Pista pista1;
     private Pista pista2;
 
+    public GameObject botonInvenatario;
+
     private void Awake()
     {
         if (Instancia != null && Instancia != this) Destroy(gameObject);
@@ -38,6 +40,7 @@ public class SistemaLogica : MonoBehaviour
     private void Start()
     {
         panelLogica.SetActive(false);
+       
     }
 
     // --- CONTROL DEL MENÚ ---
@@ -45,6 +48,7 @@ public class SistemaLogica : MonoBehaviour
     public void AbrirMenuLogica()
     {
         panelLogica.SetActive(true);
+        botonInvenatario.SetActive(false);
         DialogoUI.Instance.CerrarDialogo();
         Time.timeScale = 0f; 
         GenerarPistasEnUI();
@@ -53,6 +57,7 @@ public class SistemaLogica : MonoBehaviour
     public void CerrarMenuLogica()
     {
         panelLogica.SetActive(false);
+        botonInvenatario.SetActive(true);
         Time.timeScale = 1f; 
         LimpiarSeleccion();
 

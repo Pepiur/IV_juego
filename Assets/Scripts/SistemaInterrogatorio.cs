@@ -26,6 +26,7 @@ public class SistemaInterrogatorio : MonoBehaviour
 
     public void IniciarInterrogatorio(InterrogatorioSO nuevoInterrogatorio)
     {
+        GameManager.Instancia.estaInterrogando = true;
         interrogatorioActual = nuevoInterrogatorio;
         indiceFraseActual = 0;
         panelInterrogatorio.SetActive(true);
@@ -91,6 +92,7 @@ public class SistemaInterrogatorio : MonoBehaviour
             ContextoJugador contexto = new ContextoJugador(OrganizadorPistas.Instance.GetPistas(), GameManager.Instancia.nivelProgresoHistoria);
             interrogatorioActual.dialogoExito.EjecutarDialogo(contexto);
         }
+        GameManager.Instancia.estaInterrogando = false;
     }
 
     private void FalloEnInterrogatorio()

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [Header("Historia")]
     public int nivelProgresoHistoria = 0;
 
+    public bool estaInterrogando = false;
+
     private void Awake()
     {
         if (Instancia != null && Instancia != this) Destroy(gameObject);
@@ -35,7 +37,6 @@ public class GameManager : MonoBehaviour
     {
         vidaActual -= dano;
 
-        // Actualizamos la UI inmediatamente después del daño
         SistemaVidaUI.Instancia.ActualizarVidas(vidaActual, vidaMaxima);
 
         Debug.Log($"¡Protesta denegada! Vida restante: {vidaActual}");

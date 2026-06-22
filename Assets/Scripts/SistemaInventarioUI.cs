@@ -15,6 +15,9 @@ public class SistemaInventarioUI : MonoBehaviour
     private Pista pistaSeleccionada;
     private PistaUIElement uiElementSeleccionado;
 
+    public GameObject botonLogica;
+    public GameObject botonPresentar;
+
     private void Awake()
     {
         if (Instancia != null && Instancia != this) Destroy(gameObject);
@@ -29,6 +32,11 @@ public class SistemaInventarioUI : MonoBehaviour
     public void AbrirInventario()
     {
         panelInventario.SetActive(true);
+        if(GameManager.Instancia.estaInterrogando)
+        {
+            botonPresentar.SetActive(true);
+        }
+        botonLogica.SetActive(false);
         Time.timeScale = 0f; // Pausa el juego
         GenerarPistas();
     }
@@ -36,6 +44,7 @@ public class SistemaInventarioUI : MonoBehaviour
     public void CerrarInventario()
     {
         panelInventario.SetActive(false);
+        botonLogica.SetActive(true);
         Time.timeScale = 1f;
         LimpiarSeleccion();
 
@@ -89,7 +98,7 @@ public class SistemaInventarioUI : MonoBehaviour
         }
 
         SistemaInterrogatorio.Instancia.IntentarPresentarPista(pistaSeleccionada);
-
+        botonPresentar.SetActive(false);
         CerrarInventario();
     }
 }

@@ -17,6 +17,7 @@ public class DialogoUI : MonoBehaviour
     private DialogoDataSO nodoActual;
     private bool estaHablando = false;
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -51,10 +52,6 @@ public class DialogoUI : MonoBehaviour
 
         textoNombre.text = nodoActual.personaje;
         textoDialogo.text = nodoActual.texto;
-        if(nodoActual.siguienteDialogo == null)
-        {
-            StartCoroutine(WaitAndClose());
-        }
     }
 
     public void IntentarAvanzarDialogo()
@@ -64,6 +61,11 @@ public class DialogoUI : MonoBehaviour
         {
             nodoActual = nodoActual.siguienteDialogo;
             ActualizarPantalla();
+        }
+        else if (nodoActual.interrogatorioParaLanzar != null)
+        {
+            panelDialogo.SetActive(true);
+            SistemaInterrogatorio.Instancia.IniciarInterrogatorio(nodoActual.interrogatorioParaLanzar);
         }
         else
         {
@@ -76,19 +78,12 @@ public class DialogoUI : MonoBehaviour
         panelDialogo.SetActive(true);
         textoNombre.text = nombreHablando;
         textoDialogo.text = contenido;
-        StartCoroutine(WaitAndClose());
     }
 
-    IEnumerator WaitAndClose()
-    {
-        yield return new WaitForSeconds(this.closeDialogo);
-        textoNombre.text = "";
-        textoDialogo.text = "";
-        CerrarDialogo();
-    }
 
     public void CerrarDialogo()
     {
+
         panelDialogo.SetActive(false);
     }
 }

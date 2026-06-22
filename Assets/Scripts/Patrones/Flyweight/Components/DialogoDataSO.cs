@@ -14,6 +14,10 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
     [Header("Condiciones (Estado Intrínseco)")]
     public Pista pistaRequerida; // Si es null, el diálogo siempre está disponible
     public int nivelProgresoRequerido = 0;
+
+    [Header("Interrogatorio")]
+    // Si asignas un interrogatorio aquí, al terminar de leer este diálogo, comenzará automáticamente
+    public InterrogatorioSO interrogatorioParaLanzar;
     public void EjecutarDialogo(ContextoJugador contexto)
     {
         if (contexto.progresoHistoria < nivelProgresoRequerido)
