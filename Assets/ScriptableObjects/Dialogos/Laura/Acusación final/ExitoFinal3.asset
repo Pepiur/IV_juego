@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e3f9f262f4b8a4da5fdecc6ef57939, type: 3}
+  m_Name: ExitoFinal3
+  m_EditorClassIdentifier: 
+  idDialogo: 
+  personaje: Detective
+  texto: "Quer\xEDa tapar sus huellas, as\xED que intent\xF3 colgarlo para que pareciera
+    un suicidio, se manch\xF3 de sangre y parte de su l\xE1piz de labios se qued\xF3
+    en la cuerda."
+  siguienteDialogo: {fileID: 11400000, guid: 4415263f78df31e4ea0dd1101e64ed16, type: 2}
+  pistaRequerida: {fileID: 0}
+  nivelProgresoRequerido: 0
+  interrogatorioParaLanzar: {fileID: 0}
