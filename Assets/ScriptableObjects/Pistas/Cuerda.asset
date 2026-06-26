@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 3
   nombre: Cuerda
   descripcion: Cuerda encontrada alrededor del cuello de Steven. Tiene manchas rojas.
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: 2beceb3ba2aa3cd4c83ec2aa246c4db3, type: 3}
