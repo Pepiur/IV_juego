@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff263784c9eb90f41a9cfebafc4f42e9, type: 3}
   m_Name: PistaExito1
   m_EditorClassIdentifier: 
-  idPista: 2
+  idPista: 69
   nombre: Exito
   descripcion: SDSDASD
   icono: {fileID: 21300000, guid: 3b4a44c44819f974ab693fb71aca0d01, type: 3}

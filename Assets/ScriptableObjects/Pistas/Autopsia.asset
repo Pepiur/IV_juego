@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff263784c9eb90f41a9cfebafc4f42e9, type: 3}
-  m_Name: PistaPrueba2
+  m_Name: Autopsia
   m_EditorClassIdentifier: 
-  idPista: 420
-  nombre: cubo
-  descripcion: morado
-  icono: {fileID: 21300000, guid: bfa691117f4601147ad4959915db6ff3, type: 3}
+  idPista: 0
+  nombre: Autopsia
+  descripcion: "C\xF3mo muri\xF3 Steven y qui\xE9n es el principal sospechoso, resumido
+    en este papel. Es la prueba irrefutable."
+  icono: {fileID: 0}

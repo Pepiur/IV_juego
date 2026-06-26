@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f994ee9f57dd28b478c367c104b783c0, type: 3}
+  m_Name: InterrogatorioFinal
+  m_EditorClassIdentifier: 
+  personaje: Laura
+  frases:
+  - "\xBFC\xF3mo...?"
+  - "\xA1\xBFEn serio me acusa a m\xED?! Qu\xE9 poca ver\xFCenza"
+  - "\xA1\xBFQu\xE9 pensa, que lo colgu\xE9 yo?! No me vaciles, si pesa m\xE1s que
+    yo"
+  - "Venga, oig\xE1moslo, \xA1\xBFc\xF3mo he matado a mi marido, eh?!"
+  - "No tengo suficiente con estar viuda, sino que adem\xE1s tengo que aguantar esto..."
+  - Ay...
+  indiceFraseDebil: 3
+  pistaRequerida: {fileID: 11400000, guid: 93aeef739593e2d4baf7cc815bd15fa1, type: 2}
+  dialogoExito: {fileID: 11400000, guid: f127541047a08994ba56be879789f0ce, type: 2}
+  progresoOtorgado: 1

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f994ee9f57dd28b478c367c104b783c0, type: 3}
+  m_Name: InterrogatorioCena
+  m_EditorClassIdentifier: 
+  personaje: David
+  frases:
+  - "\xBFDe cenar? Pues..."
+  - Comimos patatas con salsa de queso de entrante
+  - "De primero tuvimos arroz caldoso \xA1mi favorito!"
+  - "De segundo comimos hamburguesas. Solo con queso, las verduras y frutas me dan
+    alergia \xA1Nada de pepinillos para m\xED!"
+  - De postre hubo natillas
+  - "\xA1El men\xFA estaba delicioso! Laura es una cocinera estupenda"
+  indiceFraseDebil: 3
+  pistaRequerida: {fileID: 11400000, guid: 0ada3422f754cee4d890b458d6cd6a21, type: 2}
+  dialogoExito: {fileID: 11400000, guid: 0505f23e12ec5b549b1c20f5babb6e4d, type: 2}
+  progresoOtorgado: 1

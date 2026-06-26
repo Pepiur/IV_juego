@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e3f9f262f4b8a4da5fdecc6ef57939, type: 3}
+  m_Name: LauraMancha2
+  m_EditorClassIdentifier: 
+  idDialogo: 
+  personaje: Laura
+  texto: "\xBFEsta...? Me manch\xE9 de tomate mientras cenabamos, soy un poco torpe.
+    \xA1Ay...!"
+  siguienteDialogo: {fileID: 11400000, guid: 326e9c63bde8e9641b34e30d28b55781, type: 2}
+  pistaRequerida: {fileID: 0}
+  nivelProgresoRequerido: 0
+  interrogatorioParaLanzar: {fileID: 0}

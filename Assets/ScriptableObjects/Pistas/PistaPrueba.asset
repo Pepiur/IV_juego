@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff263784c9eb90f41a9cfebafc4f42e9, type: 3}
   m_Name: PistaPrueba
   m_EditorClassIdentifier: 
-  idPista: 0
+  idPista: 67
   nombre: prueba
   descripcion: PIJAAAAAAA
   icono: {fileID: 21300000, guid: 0bf1d92e668f0794f8f26fbe62ff06ad, type: 3}
