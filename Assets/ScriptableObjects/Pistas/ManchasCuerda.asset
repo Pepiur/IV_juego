@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 7
   nombre: Manchas de la cuerda
   descripcion: "Las manchas de la cuerda corresponden al l\xE1piz de labios"
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: cd959259e37febf4e87aef21371043d4, type: 3}

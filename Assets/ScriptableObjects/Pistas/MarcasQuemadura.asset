@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 8
   nombre: Marcas de quemadura
   descripcion: Marcas de quemaduras alrededor del cuello de Steven.
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: 1c3950d5510839f45aa8b0212c8f4704, type: 3}

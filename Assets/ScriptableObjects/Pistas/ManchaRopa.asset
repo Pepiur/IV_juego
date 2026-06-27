@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 6
   nombre: Mancha roja
   descripcion: Mancha roja en la ropa de Laura. Dice que es de la cena
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: db26615e16901954f9edaa5a300a6d56, type: 3}

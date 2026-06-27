@@ -16,4 +16,4 @@ MonoBehaviour:
   nombre: Modus Operandi
   descripcion: "C\xF3mo muri\xF3 Steven. Necesito saber qui\xE9n podr\xEDa haber
     sido."
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: 867196e8e541b0f4a99784a2b05dce44, type: 3}

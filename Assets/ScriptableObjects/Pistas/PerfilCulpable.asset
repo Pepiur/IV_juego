@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 12
   nombre: Perfil del culpable
   descripcion: "Qui\xE9n mat\xF3 a Steven. Necesito saber c\xF3mo lo hizo."
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: db2831b2b65e5204e8aca5f6a8478a51, type: 3}

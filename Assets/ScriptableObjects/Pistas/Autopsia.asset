@@ -16,4 +16,4 @@ MonoBehaviour:
   nombre: Autopsia
   descripcion: "C\xF3mo muri\xF3 Steven y qui\xE9n es el principal sospechoso, resumido
     en este papel. Es la prueba irrefutable."
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: 19fa23ddbee4ad74c994ad8414b26d88, type: 3}

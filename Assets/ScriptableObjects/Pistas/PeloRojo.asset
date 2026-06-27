@@ -15,4 +15,4 @@ MonoBehaviour:
   idPista: 11
   nombre: Pelo rojo
   descripcion: "Este pelo rojo quiz\xE1 es del culpable"
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: 93b49b83d95f02343b2a23268f13ea9f, type: 3}
