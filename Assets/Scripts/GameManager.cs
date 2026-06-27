@@ -15,6 +15,10 @@ public class GameManager : MonoBehaviour
 
     public bool estaInterrogando = false;
 
+    [Header("Transiciones de Escena")]
+    // Esta variable guardará el ID del lugar donde el jugador debe aparecer
+    public string idProximoSpawn = "";
+
     private void Awake()
     {
         if (Instancia != null && Instancia != this) Destroy(gameObject);
