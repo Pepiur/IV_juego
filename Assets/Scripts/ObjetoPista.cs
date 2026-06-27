@@ -6,9 +6,14 @@ public class ObjetoPista : MonoBehaviour
     public bool recogida = false;
     public void SerExaminado()
     {
-        if(!recogida)
-        { OrganizadorPistas.Instance.CollectPista(datosDeLaPista); Debug.Log(datosDeLaPista.descripcion); recogida = true; }
+        if (!recogida)
+        {
+            OrganizadorPistas.Instance.CollectPista(datosDeLaPista);
+            Debug.Log(datosDeLaPista.descripcion);
+            DialogoUI.Instance.IniciarDialogo("Edgeworth", datosDeLaPista.descripcion);
+            recogida = true;
+        }
 
-        
+
     }
 }

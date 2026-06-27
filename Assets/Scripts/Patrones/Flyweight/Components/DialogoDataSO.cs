@@ -18,6 +18,8 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
     [Header("Interrogatorio")]
     // Si asignas un interrogatorio aquí, al terminar de leer este diálogo, comenzará automáticamente
     public InterrogatorioSO interrogatorioParaLanzar;
+    //Dirty flag para saber si es el dialogo final
+    public bool disparaFinDeJuego = false;
     public void EjecutarDialogo(ContextoJugador contexto)
     {
         if (contexto.progresoHistoria < nivelProgresoRequerido)

@@ -25,7 +25,7 @@ public class Interactuar : APlayerState
             {
                 Debug.Log("Interactuando con: " + hitPistas.collider.name);
                 hitPistas.collider.gameObject.GetComponent<ObjetoPista>().SerExaminado();
-                hitPistas.collider.gameObject.GetComponent<DialogoCliente>().HablarConNPC();
+                //hitPistas.collider.gameObject.GetComponent<DialogoCliente>().HablarConNPC();
                 TerminarInteraccion();
             }
             else if (hitNpc.collider != null)

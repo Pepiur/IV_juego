@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,12 +43,26 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"¡Protesta denegada! Vida restante: {vidaActual}");
 
-        if (vidaActual <= 0) FinDeJuego();
+        if (vidaActual <= 0) Derrota();
     }
 
-    private void FinDeJuego()
+    private void Derrota()
     {
         Debug.Log("GAME OVER: Has perdido toda tu credibilidad.");
         // TODO: Mostrar pantalla de Game Over y recargar la escena o ir al menú principal
+    }
+
+    public void NivelCompletado()
+    {
+        Debug.Log("¡CASO RESUELTO! El jugador ha completado el nivel.");
+        Time.timeScale = 0f;
+        esperar();
+        SceneManager.LoadScene(4);
+    }
+
+    IEnumerator esperar()
+    {
+        yield return new WaitForSeconds(5.0f);
+        StopAllCoroutines();
     }
 }

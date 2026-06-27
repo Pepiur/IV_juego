@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 206751403}
   - component: {fileID: 206751402}
   - component: {fileID: 206751405}
-  - component: {fileID: 206751406}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -257,19 +256,50 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &206751406
+--- !u!1 &297188854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297188856}
+  - component: {fileID: 297188855}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &297188855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206751401}
+  m_GameObject: {fileID: 297188854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9ab41ccc176974cb679ed837c18d54, type: 3}
+  m_Script: {fileID: 11500000, guid: c770f797c71df1344a9d8c4aadedcdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockImage: {fileID: 512407928}
+--- !u!4 &297188856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297188854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 272.48428, y: 177.65274, z: -2.2900074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512407926
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,9 +914,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 206751406}
-        m_TargetAssemblyTypeName: GestorEscenas, Assembly-CSharp
-        m_MethodName: SalirApp
+      - m_Target: {fileID: 297188855}
+        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
+        m_MethodName: Cerrar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1017,9 +1047,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 206751406}
-        m_TargetAssemblyTypeName: GestorEscenas, Assembly-CSharp
-        m_MethodName: CargarJuego
+      - m_Target: {fileID: 297188855}
+        m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
+        m_MethodName: Iniciar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1210,3 +1240,4 @@ SceneRoots:
   - {fileID: 206751404}
   - {fileID: 653102291}
   - {fileID: 749168980}
+  - {fileID: 297188856}

@@ -67,6 +67,10 @@ public class DialogoUI : MonoBehaviour
             panelDialogo.SetActive(true);
             SistemaInterrogatorio.Instancia.IniciarInterrogatorio(nodoActual.interrogatorioParaLanzar);
         }
+        else if (nodoActual.disparaFinDeJuego)
+        {
+            GameManager.Instancia.NivelCompletado();
+        }
         else
         {
             CerrarDialogo();
@@ -79,6 +83,7 @@ public class DialogoUI : MonoBehaviour
         textoNombre.text = nombreHablando;
         textoDialogo.text = contenido;
     }
+
 
 
     public void CerrarDialogo()

@@ -20,3 +20,4 @@ MonoBehaviour:
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0
