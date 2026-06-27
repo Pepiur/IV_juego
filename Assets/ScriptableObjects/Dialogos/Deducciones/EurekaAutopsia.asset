@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95e3f9f262f4b8a4da5fdecc6ef57939, type: 3}
-  m_Name: ExitoInterrogatorioCena3
+  m_Name: EurekaAutopsia
   m_EditorClassIdentifier: 
   idDialogo: 
   personaje: Detective
-  texto: "(La mancha tiene que ser de otra cosa entonces... No parece que Laura vaya
-    a decirme de qu\xE9 es, investigar\xE9 el resto antes)"
-  siguienteDialogo: {fileID: 11400000, guid: 73c5ac08584beb24182241b5eb28270a, type: 2}
+  texto: "\xA1Lo tengo! Tenemos al sujeto y c\xF3mo realiz\xF3 el crimen. Es hora
+    de enfrentarle y terminar con esto"
+  siguienteDialogo: {fileID: 0}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
   interrogatorioParaLanzar: {fileID: 0}
