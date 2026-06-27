@@ -2254,10 +2254,30 @@ MonoBehaviour:
   gridContenedorPistas: {fileID: 43570779}
   prefabPistaUI: {fileID: 1057667988704255556, guid: bdaf13cb8c87153449bea64327d98641, type: 3}
   combinacionesValidas:
-  - pistaRequerida1: {fileID: 11400000, guid: 8a724778ec0f6ee4991883f0aa4d7cd1, type: 2}
-    pistaRequerida2: {fileID: 11400000, guid: a7c0f09f59b5c8d4d934ecd1b7df7bc4, type: 2}
-    dialogoExito: {fileID: 11400000, guid: 928843db143feed4194d256ac73f9f08, type: 2}
-    pistaRecompensa: {fileID: 11400000, guid: 2423bc534770e56488b3993b67f54333, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: c258bfba1d803ce49ab86e99e65d2817, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: 3aaed7a3a8338644699d5df535a66c9e, type: 2}
+    dialogoExito: {fileID: 11400000, guid: 5149c6e221e3d584bbecdac12cc1e430, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: 6f6f1a4a4c16cff47ba4c013eb52d999, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: c258bfba1d803ce49ab86e99e65d2817, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: 482492c31b5d7ce4782c159d8537fa02, type: 2}
+    dialogoExito: {fileID: 11400000, guid: fe974a6340869474a80a8710b2348bcd, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: 25e1a3d664d9a8c4cb137dc2d14fc74b, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: 25e1a3d664d9a8c4cb137dc2d14fc74b, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: 3887afdcb3e289a42833feaa78873537, type: 2}
+    dialogoExito: {fileID: 11400000, guid: 786285d71cebd744abf611631bbe5e83, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: ff848f187ab485c4db022b5283953428, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: c7e039cb5fc8fe240b5a52931df657da, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: ff848f187ab485c4db022b5283953428, type: 2}
+    dialogoExito: {fileID: 11400000, guid: d155deba25a8da4429c7b665efa93390, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: bf03c0376a9d1624e87c17ba08cba3b2, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: 6f6f1a4a4c16cff47ba4c013eb52d999, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: d507812450bbb1f4c948b4b53f394fb4, type: 2}
+    dialogoExito: {fileID: 11400000, guid: f01c75073373e4a47b0537eb319b03b3, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: cb1d6bf96d531494f9d7ec731ed001a9, type: 2}
+  - pistaRequerida1: {fileID: 11400000, guid: cb1d6bf96d531494f9d7ec731ed001a9, type: 2}
+    pistaRequerida2: {fileID: 11400000, guid: bf03c0376a9d1624e87c17ba08cba3b2, type: 2}
+    dialogoExito: {fileID: 11400000, guid: 4936ef98b6b3a2a438253bd29ef774e1, type: 2}
+    pistaRecompensa: {fileID: 11400000, guid: 93aeef739593e2d4baf7cc815bd15fa1, type: 2}
   botonInvenatario: {fileID: 2064804279}
 --- !u!4 &1065627773
 Transform:
