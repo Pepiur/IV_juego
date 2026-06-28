@@ -4,7 +4,7 @@ using UnityEngine;
 public class OrganizadorPistas : MonoBehaviour
 {
     private List<IPistaObserver> observerCollection = new List<IPistaObserver>();
-    private List<Pista> pistas = new List<Pista>();
+    public List<Pista> pistas = new List<Pista>();
 
 
     //Patron singleton

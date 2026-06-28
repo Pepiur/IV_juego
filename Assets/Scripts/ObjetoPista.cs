@@ -10,7 +10,7 @@ public class ObjetoPista : MonoBehaviour
         {
             OrganizadorPistas.Instance.CollectPista(datosDeLaPista);
             Debug.Log(datosDeLaPista.descripcion);
-            DialogoUI.Instance.IniciarDialogo("Edgeworth", datosDeLaPista.descripcion);
+            DialogoUI.Instance.IniciarDialogo("Detective", datosDeLaPista.descripcion);
             recogida = true;
         }
 

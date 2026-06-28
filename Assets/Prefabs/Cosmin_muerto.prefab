@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5562409077295161749}
   - component: {fileID: 7603812119061042056}
-  - component: {fileID: 2822806982639785991}
   - component: {fileID: 8445621387119492890}
   m_Layer: 6
   m_Name: Cosmin_muerto
@@ -89,28 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2822806982639785991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166442538076523936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a0ceeb8963c2e4f844ed9492b30a1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saludo: {fileID: 11400000, guid: 28cfe424cce6bd941b9111c7b560f989, type: 2}
-  temasPosibles:
-  - tituloTema: La Victima
-    dialogoAsociado: {fileID: 11400000, guid: 612626d7bcad1c54db7c3852292775db, type: 2}
-    progresoRequerido: 0
-    pistaRequerida: {fileID: 0}
-  - tituloTema: Coartada
-    dialogoAsociado: {fileID: 11400000, guid: 83e571f7b8ade394581811b6f9233b84, type: 2}
-    progresoRequerido: 2
-    pistaRequerida: {fileID: 11400000, guid: 8a724778ec0f6ee4991883f0aa4d7cd1, type: 2}
 --- !u!61 &8445621387119492890
 BoxCollider2D:
   m_ObjectHideFlags: 0

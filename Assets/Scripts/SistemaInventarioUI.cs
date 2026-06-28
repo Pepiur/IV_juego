@@ -16,6 +16,7 @@ public class SistemaInventarioUI : MonoBehaviour
     private PistaUIElement uiElementSeleccionado;
 
     public GameObject botonLogica;
+    public GameObject botonInventario;
     public GameObject botonPresentar;
 
     private void Awake()
@@ -37,6 +38,7 @@ public class SistemaInventarioUI : MonoBehaviour
             botonPresentar.SetActive(true);
         }
         botonLogica.SetActive(false);
+        botonInventario.SetActive(false);
         Time.timeScale = 0f; // Pausa el juego
         GenerarPistas();
     }
@@ -45,6 +47,7 @@ public class SistemaInventarioUI : MonoBehaviour
     {
         panelInventario.SetActive(false);
         botonLogica.SetActive(true);
+        botonInventario.SetActive(true);
         Time.timeScale = 1f;
         LimpiarSeleccion();
 

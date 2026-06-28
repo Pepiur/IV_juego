@@ -30,6 +30,7 @@ public class SistemaLogica : MonoBehaviour
     private Pista pista2;
 
     public GameObject botonInvenatario;
+    public GameObject botonLogica;
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class SistemaLogica : MonoBehaviour
     {
         panelLogica.SetActive(true);
         botonInvenatario.SetActive(false);
+        botonLogica.SetActive(false);
         DialogoUI.Instance.CerrarDialogo();
         Time.timeScale = 0f; 
         GenerarPistasEnUI();
@@ -58,6 +60,7 @@ public class SistemaLogica : MonoBehaviour
     {
         panelLogica.SetActive(false);
         botonInvenatario.SetActive(true);
+        botonLogica.SetActive(true);
         Time.timeScale = 1f; 
         LimpiarSeleccion();
 

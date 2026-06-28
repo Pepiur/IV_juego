@@ -29,6 +29,7 @@ public class SistemaInterrogatorio : MonoBehaviour
         GameManager.Instancia.estaInterrogando = true;
         interrogatorioActual = nuevoInterrogatorio;
         indiceFraseActual = 0;
+        GameManager.Instancia.ActivarModoNarrativo("INTERROGATORIO");
         panelInterrogatorio.SetActive(true);
         ActualizarPantalla();
     }
@@ -80,7 +81,7 @@ public class SistemaInterrogatorio : MonoBehaviour
     private void ExitoEnInterrogatorio()
     {
         Debug.Log("¡OBJECTION! Contradicción encontrada.");
-
+        GameManager.Instancia.DesactivarModoNarrativo();
         panelInterrogatorio.SetActive(false); // Ocultamos el modo interrogatorio
 
         // 1. Avanzamos la historia

@@ -35,7 +35,6 @@ public class SistemaOpcionesUI : MonoBehaviour
             GameObject nuevoBoton = Instantiate(prefabBotonOpcion, contenedorBotones);
             nuevoBoton.GetComponentInChildren<TextMeshProUGUI>().text = tema.tituloTema;
 
-            // Configuramos el clic del botón
             nuevoBoton.GetComponent<Button>().onClick.AddListener(() =>
             {
                 CerrarMenuOpciones();

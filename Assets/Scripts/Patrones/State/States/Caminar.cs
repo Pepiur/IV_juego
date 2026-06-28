@@ -7,6 +7,10 @@ public class Caminar : APlayerState
 
     public override void FixedUpdate()
     {
+        if (GameManager.Instancia != null && !GameManager.Instancia.puedeMoverse)
+        {
+            return;
+        }
         Rigidbody2D rb = player.GetRigidbody();
         Vector2 destino = player.GetPosicionObjetivo();
         float velocidad = player.GetVelocidad();
@@ -14,12 +18,15 @@ public class Caminar : APlayerState
         Vector2 nuevaPosicion = Vector2.MoveTowards(rb.position, destino, velocidad * Time.fixedDeltaTime);
         rb.MovePosition(nuevaPosicion);
 
+
         // Girar el sprite
         Transform transform = rb.transform;
+        Vector3 escalaActual = transform.localScale;
         if (destino.x > rb.position.x)
-            transform.localScale = new Vector3(1, 1, 1);
+            { escalaActual.x = Mathf.Abs(escalaActual.x); }
         else if (destino.x < rb.position.x)
-            transform.localScale = new Vector3(-1, 1, 1);
+            { escalaActual.x = -Mathf.Abs(escalaActual.x); }
+        transform.localScale = escalaActual;
 
         if (Vector2.Distance(rb.position, destino) < 0.15f)
         {

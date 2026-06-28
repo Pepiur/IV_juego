@@ -15,6 +15,7 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
     public Pista pistaRequerida; // Si es null, el diálogo siempre está disponible
     public int nivelProgresoRequerido = 0;
 
+    public Pista darPista;
     [Header("Interrogatorio")]
     // Si asignas un interrogatorio aquí, al terminar de leer este diálogo, comenzará automáticamente
     public InterrogatorioSO interrogatorioParaLanzar;
@@ -30,7 +31,7 @@ public class DialogoDataSO : ScriptableObject, IDialogoFlyweight
 
         if (pistaRequerida != null && !contexto.pistasEnInventario.Contains(pistaRequerida))
         {
-            DialogoUI.Instance.IniciarDialogo("Edgeworth", "Parece que me falta información vital para presionar sobre este tema...");
+            DialogoUI.Instance.IniciarDialogo("Detective", "Parece que me falta información vital para presionar sobre este tema...");
             return;
         }
         DialogoUI.Instance.CargarNodoDialogo(this);

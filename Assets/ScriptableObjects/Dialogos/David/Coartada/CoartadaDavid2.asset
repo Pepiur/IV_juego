@@ -15,7 +15,8 @@ MonoBehaviour:
   idDialogo: 
   personaje: Detective
   texto: "Digame, \xBFqu\xE9 estaba haciendo durante los sucesos?"
-  siguienteDialogo: {fileID: 0}
+  siguienteDialogo: {fileID: 11400000, guid: a7d8db0d6e0942c469019a89e7ca6a74, type: 2}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0

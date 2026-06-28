@@ -6,7 +6,7 @@ public class SistemaVidaUI : MonoBehaviour
     public static SistemaVidaUI Instancia { get; private set; }
 
     [Header("Configuración Visual")]
-    public Image[] iconosVida; // Arrastra aquí las 5 imágenes de tu Canvas
+    public Image[] iconosVida;
     public Sprite spriteVidaLlena;
     public Sprite spriteVidaVacia;
 

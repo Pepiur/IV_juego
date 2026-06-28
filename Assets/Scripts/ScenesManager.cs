@@ -8,6 +8,10 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Cerrar()
     {
         Application.Quit();

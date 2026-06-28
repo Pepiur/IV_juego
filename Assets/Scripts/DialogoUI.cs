@@ -39,6 +39,7 @@ public class DialogoUI : MonoBehaviour
 
     public void CargarNodoDialogo(DialogoDataSO nodo)
     {
+        GameManager.Instancia.ActivarModoNarrativo("DIÁLOGO");
         panelDialogo.SetActive(true);
         estaHablando = true;
         nodoActual = nodo;
@@ -56,6 +57,7 @@ public class DialogoUI : MonoBehaviour
 
     public void IntentarAvanzarDialogo()
     {
+        
         if (!estaHablando) return;
         if (nodoActual.siguienteDialogo != null)
         {
@@ -73,6 +75,11 @@ public class DialogoUI : MonoBehaviour
         }
         else
         {
+            if(nodoActual.darPista != null)
+            {
+                OrganizadorPistas.Instance.CollectPista(nodoActual.darPista);
+            }
+            GameManager.Instancia.DesactivarModoNarrativo();
             CerrarDialogo();
         }
     }
