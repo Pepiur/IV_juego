@@ -15,9 +15,10 @@ MonoBehaviour:
   idDialogo: 
   personaje: Detective
   texto: "Mientras cenaba con David, el hielo acab\xF3 con la vida de Steven, d\xE1ndole
-    a usted la cohartada perfecta y el papel de mujer afecta, \xA1\xBFMe equivoco?!"
+    a usted la cohartada perfecta y el papel de mujer afectada, \xA1\xBFMe equivoco?!"
   siguienteDialogo: {fileID: 11400000, guid: 3b5d205a140f0be4c8cfa79bd368a8ce, type: 2}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
+  darPista: {fileID: 0}
   interrogatorioParaLanzar: {fileID: 0}
   disparaFinDeJuego: 0
