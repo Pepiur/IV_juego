@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idDialogo: 
   personaje: Detective
-  texto: "(Laura ha roto a llorar, no parece que quiera seguir hablandod e la cena.
+  texto: "(Laura ha roto a llorar, no parece que quiera seguir hablando de la cena.
     Me apuntar\xE9 la mancha de tomate, por si acaso)"
   siguienteDialogo: {fileID: 0}
   pistaRequerida: {fileID: 0}
