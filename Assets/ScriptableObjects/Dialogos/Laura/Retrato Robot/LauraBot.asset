@@ -18,5 +18,7 @@ MonoBehaviour:
     su opini\xF3n al respecto?"
   siguienteDialogo: {fileID: 11400000, guid: 2910114103521ca478f64d766ea761c0, type: 2}
   pistaRequerida: {fileID: 11400000, guid: ff848f187ab485c4db022b5283953428, type: 2}
-  nivelProgresoRequerido: 0
+  nivelProgresoRequerido: 1
+  darPista: {fileID: 0}
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0

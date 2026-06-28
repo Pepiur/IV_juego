@@ -16,7 +16,8 @@ MonoBehaviour:
   personaje: David
   texto: "Estaba cenando con Laura, Steven se supone que deb\xEDa acompa\xF1arnos
     pero nos lo comimos todo antes de que saliera del despacho."
-  siguienteDialogo: {fileID: 0}
+  siguienteDialogo: {fileID: 11400000, guid: 0af030d52b6ac924e9849d3881bca296, type: 2}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0

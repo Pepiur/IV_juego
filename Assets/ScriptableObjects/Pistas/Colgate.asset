@@ -16,4 +16,4 @@ MonoBehaviour:
   nombre: "C\xF3mo se colg\xF3"
   descripcion: "Steven no se ahorc\xF3, fue colgado sobre un bloque de hielo. Al
     derretirse, se asfixi\xF3"
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: e3f2682519018154da1d10c4520510de, type: 3}

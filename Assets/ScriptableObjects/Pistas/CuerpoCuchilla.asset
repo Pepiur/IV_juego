@@ -16,4 +16,4 @@ MonoBehaviour:
   nombre: "Cuerpo apu\xF1alado"
   descripcion: "El cuerpo de Steven presentaba varias pu\xF1aladas a lo largo del
     cuerpo"
-  icono: {fileID: 0}
+  icono: {fileID: 21300000, guid: e3518523fc018fd4997148596c7a3518, type: 3}

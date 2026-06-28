@@ -15,7 +15,8 @@ MonoBehaviour:
   idDialogo: 
   personaje: David
   texto: "Tan j\xF3ven... Pobre Laura"
-  siguienteDialogo: {fileID: 0}
+  siguienteDialogo: {fileID: 11400000, guid: 4bffe900102e0dc48973f734427f6fc4, type: 2}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0

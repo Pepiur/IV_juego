@@ -19,4 +19,6 @@ MonoBehaviour:
   siguienteDialogo: {fileID: 0}
   pistaRequerida: {fileID: 0}
   nivelProgresoRequerido: 0
+  darPista: {fileID: 11400000, guid: 0ada3422f754cee4d890b458d6cd6a21, type: 2}
   interrogatorioParaLanzar: {fileID: 0}
+  disparaFinDeJuego: 0
